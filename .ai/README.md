@@ -62,6 +62,8 @@ Everything else exists to improve the quality of that loop:
   Shared command definitions
 - `skills/grill-me/`
   Interrogation skill used before assumptions
+- `skills/stress-grill/`
+  Tighter, more relentless grilling mode for plans and designs
 - `templates/`
   Artifact templates
 - `context/`
