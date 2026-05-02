@@ -1,0 +1,188 @@
+schema_version: "1.0"
+
+project:
+  name: "reference-project"
+  purpose: "Reference manifest showing how a repo can adopt the reusable Codex .ai layer with stack and integration overlays."
+  repo_type: "application"
+  primary_stack: "frontend-framework"
+  workspace_style: "workspace-or-monorepo"
+  package_manager: "package-manager"
+
+overlays:
+  primary: "frontend-stack"
+  secondary:
+    - "pr-platform"
+
+capabilities:
+  angular_mcp:
+    required: true
+    provider: "angular-mcp"
+    notes:
+      - "Example stack-specific capability. Replace with the real stack tooling for the target repo."
+  azure_devops:
+    required: true
+    provider: "azure-devops"
+    notes:
+      - "Example PR and work-item capability. Replace with the real provider for the target repo."
+  browser:
+    required: false
+    provider: "browser-use"
+    notes:
+      - "Useful for meaningful UI verification paths and browser-based regression checks."
+  ui_test:
+    required: false
+    provider: "playwright"
+    notes:
+      - "Recommended when the repo has meaningful UI flows, forms, routing, or end-to-end regression risk."
+  memory:
+    required: false
+    provider: "forge-v2"
+    notes:
+      - "Optional memory layer that may index manifest and artifact outputs."
+
+commands:
+  bootstrap:
+    requires_plan: false
+    allowed_without_plan: true
+    required_capabilities: []
+    artifact_output:
+      - ".ai/project.yaml"
+      - ".ai/context/examples.md"
+  prime:
+    requires_plan: false
+    allowed_without_plan: true
+    required_capabilities:
+      - "angular_mcp"
+    artifact_output:
+      - ".ai/context/architecture.md"
+  create-prd:
+    requires_plan: false
+    allowed_without_plan: true
+    required_capabilities: []
+    artifact_output:
+      - ".ai/prd/"
+  plan:
+    requires_plan: false
+    allowed_without_plan: true
+    required_capabilities:
+      - "angular_mcp"
+    artifact_output:
+      - ".ai/plans/"
+  implement:
+    requires_plan: true
+    allowed_without_plan: true
+    required_capabilities:
+      - "angular_mcp"
+    artifact_output: []
+  validate:
+    requires_plan: false
+    allowed_without_plan: true
+    required_capabilities: []
+    artifact_output:
+      - ".ai/validation/"
+  review:
+    requires_plan: false
+    allowed_without_plan: true
+    required_capabilities: []
+    artifact_output:
+      - ".ai/reviews/"
+  create-pr:
+    requires_plan: false
+    allowed_without_plan: true
+    required_capabilities:
+      - "azure_devops"
+    artifact_output:
+      - ".ai/prs/"
+
+artifacts:
+  root: ".ai"
+  prd:
+    path: ".ai/prd"
+    naming: "{slug}.prd.md"
+  plans:
+    path: ".ai/plans"
+    naming: "{slug}.plan.md"
+  reviews:
+    path: ".ai/reviews"
+    naming: "{slug}.review.md"
+  validation:
+    path: ".ai/validation"
+    naming: "{slug}.validation.md"
+  prs:
+    path: ".ai/prs"
+    naming: "{slug}.pr.md"
+  context:
+    path: ".ai/context"
+    naming: "repo-curated docs and references"
+  evolution_candidates:
+    path: ".ai/evolution/candidates"
+    naming: "{slug}.candidate.md"
+  evolution_approved:
+    path: ".ai/evolution/approved"
+    naming: "{slug}.approved.md"
+
+context:
+  trusted_sources:
+    - ".ai/AGENT.md"
+    - ".ai/project.yaml"
+    - ".ai/context/architecture.md"
+    - ".ai/context/examples.md"
+    - ".ai/context/piv-loop.md"
+    - ".ai/context/tools.md"
+    - ".ai/context/evolution.md"
+  approved_examples:
+    - path: "src/app/example.component.ts"
+      reason: "Representative UI component placeholder to replace during onboarding."
+    - path: "src/app/example.service.ts"
+      reason: "Representative service or business-logic placeholder to replace during onboarding."
+  notes:
+    - "Bootstrap should harvest candidate repo-native examples and require human confirmation."
+
+validation:
+  commands:
+    - "npm run lint"
+    - "npm run test -- --watch=false"
+    - "npm run build"
+  escalation_rules:
+    - "Run full build for non-trivial changes."
+    - "Require browser verification for user-facing UI flows when browser capability is available."
+    - "Require UI test coverage or Playwright verification when interactive flows, forms, navigation, or cross-page behavior are changed."
+    - "Broaden test coverage when route, form, state, or API behavior changes."
+
+review:
+  priorities:
+    - "behavior regressions"
+    - "broken state flow"
+    - "route or permission issues"
+    - "API and model mismatches"
+    - "form and validation bugs"
+    - "missing tests on risky paths"
+  required_evidence:
+    - "validation results"
+    - "noted risks or unverified areas"
+
+pr:
+  platform: "azure-devops"
+  required_fields:
+    - "title"
+    - "summary"
+    - "linked work items"
+    - "validation evidence"
+    - "risk notes"
+    - "rollout notes"
+
+memory:
+  enabled: false
+  provider: "forge-v2"
+  index_from:
+    - ".ai/project.yaml"
+    - ".ai/prd"
+    - ".ai/plans"
+    - ".ai/reviews"
+    - ".ai/validation"
+    - ".ai/prs"
+    - ".ai/evolution/candidates"
+    - ".ai/evolution/approved"
+  tags:
+    - "codex-ai-layer"
+    - "repo-local-artifacts"
