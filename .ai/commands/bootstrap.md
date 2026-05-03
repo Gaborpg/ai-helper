@@ -15,7 +15,9 @@ Create a first draft `.ai/` layer for a target repo without pretending unknown f
 - Inspect the repo before asking avoidable questions.
 - Detect likely stack, package manager, workspace style, tools, and integrations.
 - Harvest candidate repo-native examples.
-- Ask the minimum required human confirmation questions.
+- After repo inspection, run an explicit human confirmation phase with `grill-me`.
+- Ask confirmation questions one at a time, not as a bundle.
+- Do not finalize the onboarding draft until unresolved policy choices have been asked interactively.
 - Generate draft `.ai/` files and clearly mark them as review-required.
 
 ## Minimum Human Confirmations

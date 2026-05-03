@@ -27,10 +27,12 @@ Drafts updated:
 
 I still need confirmation on:
 - enabled overlays
-- mandatory capabilities
-- approved example files
-- validation commands
-- PR platform
+
+Question: Should the primary overlay stay `angular`, with `github` and `ui-test` as secondary overlays?
+
+Recommended answer: yes.
+
+Why: The repo is clearly Angular-first, while GitHub and UI testing shape workflow and validation rather than core component architecture.
 ```
 
 ## Example Draft `project.yaml` Changes
@@ -128,6 +130,8 @@ After bootstrap, the human should confirm:
 - PR platform
 - approved examples
 - whether UI testing is mandatory for certain flows
+
+These confirmations should be asked one at a time, not as a bundled list in a single turn.
 
 ## What Good Bootstrap Does Not Do
 

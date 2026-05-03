@@ -114,6 +114,7 @@ After copying `.ai/` into a repo, start with:
 - `context/onboarding-checklist.md`
 
 That prompt tells the AI to inspect the repo, use `grill-me`, and convert the copied template into a repo-specific draft rather than inventing a new structure.
+Onboarding should include an explicit one-question-at-a-time confirmation phase before the draft is treated as ready for approval.
 
 ## System Evolution
 

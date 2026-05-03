@@ -13,7 +13,8 @@ The goal is to separate:
 1. start with `grill-me`
 2. inspect the repo
 3. draft `.ai/` updates
-4. ask for confirmation on uncertain or policy-level choices
+4. run an explicit `grill-me` confirmation phase
+5. ask for confirmation on uncertain or policy-level choices one at a time
 5. finalize the repo-specific `.ai/` setup
 
 ## AI Should Infer When Possible
@@ -60,6 +61,7 @@ Good onboarding:
 - uses repo inspection before asking
 - proposes drafts instead of pretending certainty
 - asks only for the highest-value confirmations
+- asks confirmation questions one at a time
 - leaves a reviewable paper trail in `.ai/`
 
 ## Bad Onboarding Behavior
@@ -70,4 +72,5 @@ Bad onboarding:
 - finalizes tools without confirmation
 - chooses example files without showing them
 - hardcodes validation commands without evidence
+- bundles several unresolved questions into one turn
 - implements product features during setup

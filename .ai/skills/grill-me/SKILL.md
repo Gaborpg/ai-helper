@@ -13,12 +13,16 @@ Sharpen the problem before any plan or implementation starts.
 
 ## Behavior
 
+- Ask exactly one question at a time.
 - Ask one strong question at a time when the answer cannot be discovered locally.
 - If the codebase already answers the question, inspect first instead of asking.
 - Push on contradictions, missing scope boundaries, and risky assumptions.
 - Prefer decision-forcing questions over broad brainstorming prompts.
 - Always include a recommended answer.
 - Do not allow missing facts to be replaced by guesswork.
+
+Do not batch multiple unresolved decisions into one turn.
+If several confirmation points exist, ask them one by one in dependency order.
 
 ## Areas To Probe
 
