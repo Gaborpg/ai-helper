@@ -16,6 +16,7 @@ Requirements:
 - update `.ai/context/architecture.md`
 - update `.ai/context/examples.md`
 - update `.ai/context/tools.md`
+- update `.ai/context/repo-operating-policy.md`
 - harvest candidate repo-native examples for UI patterns, services or business logic, tests, and state or workflow patterns
 - after inspection, ask me confirmation questions one at a time with grill-me before finalizing the draft
 - ask me to confirm overlays, mandatory capabilities, PR platform, validation commands, and approved examples

@@ -62,6 +62,7 @@ Good onboarding:
 - proposes drafts instead of pretending certainty
 - asks only for the highest-value confirmations
 - asks confirmation questions one at a time
+- records repo operating policy, not just stack facts
 - leaves a reviewable paper trail in `.ai/`
 
 ## Bad Onboarding Behavior

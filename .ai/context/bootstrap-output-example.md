@@ -24,6 +24,7 @@ Drafts updated:
 - `.ai/context/architecture.md`
 - `.ai/context/examples.md`
 - `.ai/context/tools.md`
+- `.ai/context/repo-operating-policy.md`
 
 I still need confirmation on:
 - enabled overlays
@@ -117,6 +118,42 @@ Example:
 - Azure DevOps tooling is mandatory for PR and work-item workflows
 - Browser verification is required for user-facing UI changes
 - Playwright validation is required for risky flows involving forms, navigation, or multi-step journeys
+```
+
+## Example Draft `repo-operating-policy.md`
+
+Example:
+
+```md
+# Repo Operating Policy
+
+## Commands
+
+- `plan` is mandatory for non-trivial onboarding, registration, and state-management changes
+- `zoom-out` should be used when touching unfamiliar onboarding or Elf store areas
+- direct implementation is acceptable only for narrow UI text or styling fixes
+
+## Validation
+
+- use `npm run lint`, `npm run test -- --watch=false`, and `npm run build`
+- require browser verification for user-facing onboarding and registration changes
+- require Playwright validation for risky multi-step flows
+
+## Review
+
+- prioritize onboarding regressions, registration validation bugs, and Elf state-flow issues
+
+## PR Rules
+
+- Azure DevOps is the PR platform
+- PRs must include linked work items and validation evidence
+
+## Tools And MCP Status
+
+- Angular MCP: required
+- Azure DevOps integration: required
+- Browser automation: optional but recommended for UI verification
+- Playwright: expected for risky flows
 ```
 
 ## Human Confirmation Checklist
