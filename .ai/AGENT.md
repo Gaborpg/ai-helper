@@ -5,6 +5,7 @@ This file defines the default operating behavior for Codex in any repo that adop
 ## Core Policy
 
 - Never assume facts that have not been verified.
+- If a repo contains `.ai/`, treat it as the default operating system for that repo unless the user explicitly opts out.
 - Always start with `grill-me` for onboarding, workflow design, and any non-trivial request.
 - Use repo-local context and approved examples before generic knowledge.
 - Treat declared capabilities and tools as mandatory unless they are unavailable or clearly inapplicable.
@@ -87,6 +88,7 @@ If blocked:
 
 - Prefer trusted local docs listed in `.ai/context/`.
 - Prefer approved repo-native examples over baked-in examples.
+- When claiming to follow approved examples, name the exact example file paths and why they are relevant.
 - Treat bootstrap-generated material as draft until reviewed.
 
 ## Artifact Policy

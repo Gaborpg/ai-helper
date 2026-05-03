@@ -11,6 +11,7 @@ It is designed to be copied into a target repository and then customized through
 
 The core template is stack-neutral.
 The sample manifest uses example stack and integration capability names only as placeholders to replace during onboarding.
+If `.ai/` exists in a repo, the AI should treat it as the default operating system for that repo without needing repeated prompting.
 
 ## Core Principles
 
@@ -116,6 +117,7 @@ After copying `.ai/` into a repo, start with:
 
 That prompt tells the AI to inspect the repo, use `grill-me`, and convert the copied template into a repo-specific draft rather than inventing a new structure.
 Onboarding should include an explicit one-question-at-a-time confirmation phase before the draft is treated as ready for approval.
+Onboarding should replace placeholders, cite exact approved example paths, and materialize only the files the repo actually needs.
 
 ## System Evolution
 
@@ -135,3 +137,4 @@ Approved code example references in:
 - `context/examples.md`
 
 should be used by both commands and skills whenever repo-specific patterns matter.
+When they are used, the AI should name the exact files and explain why they apply.

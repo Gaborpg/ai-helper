@@ -128,7 +128,9 @@ context:
     - ".ai/context/architecture.md"
     - ".ai/context/examples.md"
     - ".ai/context/piv-loop.md"
+    - ".ai/context/repo-operating-policy.md"
     - ".ai/context/tools.md"
+    - ".ai/context/ui-testing.md"
     - ".ai/context/evolution.md"
   approved_examples:
     - path: "src/app/example.component.ts"

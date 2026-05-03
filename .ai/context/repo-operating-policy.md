@@ -14,6 +14,7 @@ Document:
 - when `zoom-out` should be used before implementation
 - when direct small-task implementation is acceptable
 - when commands should load approved example references from `.ai/context/examples.md`
+- when commands must cite exact example file paths in their reasoning
 
 ## Validation
 
@@ -42,6 +43,7 @@ Document:
 - when `grill-me` is the default
 - when `stress-grill` is preferred
 - when skills must inspect approved example references before reasoning about local patterns
+- when skills must show exact approved example file paths instead of vaguely referring to "existing patterns"
 
 ## PR Rules
 

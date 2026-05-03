@@ -63,6 +63,9 @@ Good onboarding:
 - asks only for the highest-value confirmations
 - asks confirmation questions one at a time
 - records repo operating policy, not just stack facts
+- replaces placeholders or explicitly flags them as unresolved
+- shows exact approved example paths before treating them as selected
+- materializes only needed files instead of leaving generic scaffold residue
 - leaves a reviewable paper trail in `.ai/`
 
 ## Bad Onboarding Behavior
@@ -74,4 +77,6 @@ Bad onboarding:
 - chooses example files without showing them
 - hardcodes validation commands without evidence
 - bundles several unresolved questions into one turn
+- leaves placeholder defaults in place without flagging them
+- leaves unused onboarding scaffold files in the repo
 - implements product features during setup
