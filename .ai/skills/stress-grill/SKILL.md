@@ -18,6 +18,7 @@ For each question, provide your recommended answer.
 - Keep drilling until the important branches are resolved.
 - Follow dependency order instead of jumping randomly.
 - Prefer codebase inspection over asking when the repo can answer the question.
+- When implementation style or architecture patterns matter, consult `.ai/context/examples.md` and inspect approved example references before asking avoidable questions.
 - Include a recommended answer with every question.
 - Do not soften unclear or risky assumptions.
 
@@ -28,6 +29,14 @@ For each question, provide your recommended answer.
 - exposing hidden assumptions
 - preparing a feature before planning
 - challenging a risky technical direction
+
+## Example Usage
+
+When the plan depends on local patterns:
+
+- read `.ai/context/examples.md`
+- inspect the referenced approved example files
+- pressure-test the design against those real patterns instead of generic assumptions
 
 ## Output
 

@@ -127,3 +127,11 @@ Use:
 - `commands/promote-pattern.md`
 
 to turn repeated prompts, fixes, warnings, or artifact shapes into durable commands, skills, rules, templates, or validation policies.
+
+## Example References
+
+Approved code example references in:
+
+- `context/examples.md`
+
+should be used by both commands and skills whenever repo-specific patterns matter.

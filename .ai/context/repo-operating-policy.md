@@ -13,6 +13,7 @@ Document:
 - when `create-prd` is expected
 - when `zoom-out` should be used before implementation
 - when direct small-task implementation is acceptable
+- when commands should load approved example references from `.ai/context/examples.md`
 
 ## Validation
 
@@ -32,6 +33,15 @@ Document:
 - what review should focus on
 - what evidence is required before handoff
 - what common regressions matter most
+
+## Skills
+
+Document:
+
+- which skills are used most often
+- when `grill-me` is the default
+- when `stress-grill` is preferred
+- when skills must inspect approved example references before reasoning about local patterns
 
 ## PR Rules
 
