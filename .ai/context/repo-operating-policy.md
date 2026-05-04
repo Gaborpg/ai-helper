@@ -15,6 +15,8 @@ Document:
 - when direct small-task implementation is acceptable
 - when commands should load approved example references from `.ai/context/examples.md`
 - when commands must cite exact example file paths in their reasoning
+- which recurring repo workflows are not covered well enough by the shared command set
+- which repo-local commands should be added if gaps exist
 
 ## Validation
 
@@ -44,6 +46,8 @@ Document:
 - when `stress-grill` is preferred
 - when skills must inspect approved example references before reasoning about local patterns
 - when skills must show exact approved example file paths instead of vaguely referring to "existing patterns"
+- which recurring reasoning patterns are not covered well enough by the shared skill set
+- which repo-local skills should be added if gaps exist
 
 ## PR Rules
 

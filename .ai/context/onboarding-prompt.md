@@ -22,8 +22,10 @@ Requirements:
 - replace placeholder values where the repo provides evidence
 - if a value is still unresolved, mark it clearly instead of leaving a silent generic default
 - materialize only the files this repo actually needs and avoid leaving unused onboarding scaffold files behind
+- review whether the shared commands are enough for this repo and propose repo-local command drafts if needed
+- review whether the shared skills are enough for this repo and propose repo-local skill drafts if needed
 - after inspection, ask me confirmation questions one at a time with grill-me before finalizing the draft
-- ask me to confirm overlays, mandatory capabilities, PR platform, validation commands, and approved examples
+- ask me to confirm overlays, mandatory capabilities, PR platform, validation commands, approved examples, and any command or skill gaps
 - save artifacts under `.ai/`
 
 Do not implement app features yet. Only onboard the repo.

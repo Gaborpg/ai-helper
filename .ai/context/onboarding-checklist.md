@@ -15,7 +15,8 @@ The goal is to separate:
 3. draft `.ai/` updates
 4. run an explicit `grill-me` confirmation phase
 5. ask for confirmation on uncertain or policy-level choices one at a time
-5. finalize the repo-specific `.ai/` setup
+6. review command and skill coverage gaps
+7. finalize the repo-specific `.ai/` setup
 
 ## AI Should Infer When Possible
 
@@ -30,6 +31,8 @@ AI should inspect the repo first and draft these when evidence exists:
 - candidate example files
 - likely overlays
 - likely capabilities and tools
+- likely recurring workflows that may deserve repo-local commands
+- likely recurring reasoning patterns that may deserve repo-local skills
 
 ## Human Must Confirm
 
@@ -43,6 +46,8 @@ These should not be silently finalized when uncertain:
 - PR platform
 - whether UI testing is mandatory for certain flows
 - whether memory integration is desired
+- whether new repo-local commands should be added
+- whether new repo-local skills should be added
 
 ## Human Optional Input
 
@@ -66,6 +71,8 @@ Good onboarding:
 - replaces placeholders or explicitly flags them as unresolved
 - shows exact approved example paths before treating them as selected
 - materializes only needed files instead of leaving generic scaffold residue
+- reviews whether recurring workflows deserve repo-local commands
+- reviews whether recurring reasoning patterns deserve repo-local skills
 - leaves a reviewable paper trail in `.ai/`
 
 ## Bad Onboarding Behavior
@@ -79,4 +86,6 @@ Bad onboarding:
 - bundles several unresolved questions into one turn
 - leaves placeholder defaults in place without flagging them
 - leaves unused onboarding scaffold files in the repo
+- ignores obvious repo-specific workflow gaps
+- ignores obvious repo-specific skill gaps
 - implements product features during setup

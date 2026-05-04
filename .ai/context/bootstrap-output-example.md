@@ -167,8 +167,22 @@ After bootstrap, the human should confirm:
 - PR platform
 - approved examples
 - whether UI testing is mandatory for certain flows
+- whether the repo needs additional local commands
+- whether the repo needs additional local skills
 
 These confirmations should be asked one at a time, not as a bundled list in a single turn.
+
+## Example Command And Skill Gap Review
+
+Example:
+
+```text
+Potential command gap:
+- `validate-embed` because this repo has a special embed build and recurring embed-specific verification needs
+
+Potential skill gap:
+- `elf-state-review` because this repo repeatedly depends on Elf-specific state reasoning that is not covered by the shared grilling skills
+```
 
 ## What Good Bootstrap Does Not Do
 
